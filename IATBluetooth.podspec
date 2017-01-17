@@ -65,11 +65,11 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "9.3"
+  s.platform     = :ios, "10.0"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "9.3"
-  s.osx.deployment_target = "10.10"
+  # s.ios.deployment_target = "9.3"
+  # s.osx.deployment_target = "10.10"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "IATBluetooth", "IATBluetooth/**/*.{h,m,swift}"
-  s.exclude_files = "Classes/Exclude"
+  s.exclude_files = "IATBluetooth/Exclude"
 
   # s.public_header_files = "IATBluetooth/**/*.h"
 
@@ -120,6 +120,8 @@ Pod::Spec.new do |s|
   s.framework  = "IATFoundationUtilities"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
+# s.vendored_frameworks
+
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
@@ -134,5 +136,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
+
+  s.dependency 'IATFoundationUtilities', '~> 0.0.1'
 
 end
